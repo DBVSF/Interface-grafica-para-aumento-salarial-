@@ -10,15 +10,24 @@ public class AumentoSalarial {
         this.func = func;
     }
 
+  
+    
+    
     public double calcularAumento() {
         
         double novoSalario = 0;
         int codCargo = this.func.getCodCargo();
         
-        if (codCargo == 101) {
+        
+        if (codCargo == 101 ) {
+             
             novoSalario = this.calcGerente();
+            
         } else if (codCargo == 102) {
+            
+            
             novoSalario = this.calcEngenheiro();
+            
         } else if (codCargo == 103) {
             novoSalario = this.calcTecnico();
         } else {
@@ -29,7 +38,7 @@ public class AumentoSalarial {
     }
 
     private double calcGerente() {
-
+        func.cargo = "gerente";
         int tempo = this.func.getTempServico();
         double percentual = 0;
 
@@ -53,6 +62,7 @@ public class AumentoSalarial {
 
         int tempo = this.func.getTempServico();
         double percentual = 0;
+          func.cargo = "Engenheiro";
 
         if (tempo >= 1 & tempo < 2) {
             percentual = 15;
@@ -75,6 +85,8 @@ public class AumentoSalarial {
         int tempo = this.func.getTempServico();
         double percentual = 0;
 
+          func.cargo = "tecnico";
+        
         if (tempo >= 1 & tempo < 2) {
             percentual = 5;
         } else if (tempo <= 3) {
@@ -95,6 +107,7 @@ public class AumentoSalarial {
 
         int tempo = this.func.getTempServico();
         double percentual = 0;
+          func.cargo = "outra func";
 
         if (tempo >= 3) {
             percentual = 35;

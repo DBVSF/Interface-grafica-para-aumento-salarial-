@@ -3,9 +3,29 @@ package modelo;
 public class Funcionario {
  
     private String nome;
+    private String sobrenome;
     private double salario;
     private int codCargo;
     private int tempServico;
+    public String cargo;
+    
+    public String getCargo(){
+        return this.cargo;
+    }
+    public void setCargo(String cargo){
+        this.cargo = cargo;
+    }
+    
+    
+    public String getSobrenome(){
+    
+    return this.sobrenome;
+    
+}
+    public void setSobrenome(String sobrenome){
+        this.sobrenome = sobrenome;
+    }
+    
     
     public String getNome() {
         return this.nome;
@@ -16,7 +36,7 @@ public class Funcionario {
     }
 
     public double getSalario() {
-        return salario;
+        return this.salario;
     }
 
     public void setSalario(double salario) {
